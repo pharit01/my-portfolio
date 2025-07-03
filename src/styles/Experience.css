@@ -1,0 +1,138 @@
+.exp-container {
+  background: #f6f8fb;
+  height: calc(100vh - 40vh);
+  max-height: 60vh;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.exp-title {
+  text-align: center;
+  font-size: 2.8rem;
+  font-family: 'serif';
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.exp-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+  height: auto;
+}
+
+.exp-card {
+  background: #f6f8fb;
+  border: 2px solid #222;
+  border-radius: 40px;
+  padding: 40px 60px;
+  width: 50%;              /* แบ่งครึ่งหน้าจอ */
+  min-width: 320px;
+  max-width: 100%;
+  font-family: 'serif';
+  text-align: left;
+  box-sizing: border-box;
+  align-self: flex-start;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.exp-card-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.exp-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 0; /* กำหนด gap เฉพาะแนวตั้ง */
+  font-size: 1.6rem;
+  justify-content: space-between; /* กระจายช่องว่างแนวนอนให้เท่ากัน */
+}
+
+.exp-list li {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  width: 32%; /* ใช้เปอร์เซ็นต์เพื่อให้แต่ละช่องกว้างเท่ากัน */
+  margin-bottom: 24px;
+  box-sizing: border-box;
+}
+
+.exp-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+@media (max-width: 1100px) {
+  .exp-container {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    height: auto;
+    max-height: none;
+  }
+  .exp-title {
+    font-size: 2rem;
+    margin-bottom: 24px;
+    margin-top: 0;
+  }
+  .exp-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+  .exp-card {
+    width: 90vw;
+    min-width: 180px;
+    max-width: 420px;
+    padding: 24px 16px;
+    margin: 0 auto;
+  }
+  .exp-card-title {
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+  }
+  .exp-list {
+    gap: 16px 0;
+    font-size: 1.1rem;
+  }
+  .exp-list li {
+    width: 48%;
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+  .exp-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+  }
+}
+
+@media (max-width: 900px) {
+  .exp-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .exp-card {
+    width: 100%;
+    min-width: unset;
+    padding: 24px 20px;
+  }
+  .exp-list li {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+}

@@ -1,0 +1,49 @@
+/* styles.css */
+.header {
+  text-align: center;
+  background: white;
+  height: 20vh;           /* ปรับความสูง header */
+  display: flex;
+  flex-direction: column;  /* จัดเรียงแนวตั้ง */
+  align-items: center;
+  justify-content: center; /* จัดให้อยู่ตรงกลางทั้งแนวตั้งและแนวนอน */
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;   /* เพิ่มระยะห่างโลโก้กับเมนู */
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: black;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: dodgerblue;
+}
+
+.nav-link.active {
+  color: dodgerblue;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: dodgerblue;
+  left: 0;
+  bottom: -5px;
+}

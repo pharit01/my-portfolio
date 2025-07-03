@@ -1,0 +1,110 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.hero {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.title {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+.subtitle {
+  font-size: 1.5rem;
+  color: gray;
+}
+.cta-buttons button {
+  margin: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.about, .projects, .contact {
+  margin-bottom: 40px;
+}
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+form button {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.app-wak {
+  flex-grow: 1; /* This will allow the footer to stay at the bottom */
+  background: #f6f8fb;
+}
+
+/* เพิ่มใน App.css */
+.arrow-btn {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(79,140,255,0.10), 0 1.5px 6px rgba(30,39,70,0.08);
+  cursor: pointer;
+  transition: box-shadow 0.2s, transform 0.15s;
+  padding: 0;
+}
+
+.arrow-btn:hover {
+  box-shadow: 0 8px 24px rgba(79,140,255,0.18), 0 2px 8px rgba(30,39,70,0.14);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.arrow-left {
+  left: 32px;
+}
+
+.arrow-right {
+  right: 32px;
+}
+
+.arrow-icon {
+  width: 38px;
+  height: 38px;
+  display: block;
+}
+
+/* SVG Arrow style */
+.arrow-svg {
+  width: 38px;
+  height: 38px;
+  display: block;
+}
+
+.arrow-body {
+  stroke: #a0a7b4;
+  stroke-width: 10;
+  stroke-linecap: round;
+}
+
+.arrow-head {
+  stroke: #1e2746;
+  stroke-width: 10;
+  stroke-linecap: round;
+  fill: none;
+}
