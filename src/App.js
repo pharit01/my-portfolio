@@ -12,14 +12,46 @@ const pages = ["home", "about", "experience", /*"projects",*/ "contact"];
 
 function App() {
   const [page, setPage] = useState("home");
+  const [fade, setFade] = useState(false);
+  const [slideDir, setSlideDir] = useState(""); // "left" หรือ "right"
   const currentIndex = pages.indexOf(page);
 
+  const changePage = (newPage) => {
+    if (newPage === page) return;
+    const newIndex = pages.indexOf(newPage);
+    const dir = newIndex > currentIndex ? "left" : "right";
+    setSlideDir(dir);
+    setFade(true);
+    setTimeout(() => {
+      setPage(newPage);
+      setFade(false);
+      setSlideDir("");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, 350);
+  };
+
   const goPrev = () => {
-    setPage(pages[(currentIndex - 1 + pages.length) % pages.length]);
+    setSlideDir("right");
+    setFade(true);
+    setTimeout(() => {
+      const prevPage = pages[(currentIndex - 1 + pages.length) % pages.length];
+      setPage(prevPage);
+      setFade(false);
+      setSlideDir("");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, 350);
   };
 
   const goNext = () => {
-    setPage(pages[(currentIndex + 1) % pages.length]);
+    setSlideDir("left");
+    setFade(true);
+    setTimeout(() => {
+      const nextPage = pages[(currentIndex + 1) % pages.length];
+      setPage(nextPage);
+      setFade(false);
+      setSlideDir("");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, 350);
   };
 
   return (
@@ -36,12 +68,14 @@ function App() {
           </svg>
         </button>
       )}
-      <Header page={page} setPage={setPage} />
-      {page === "home" && <Home setPage={setPage} />}
-      {page === "about" && <About />}
-      {page === "experience" && <Experience />}
-      {page === "projects" && <Projects />}
-      {page === "contact" && <Contact />}
+      <Header page={page} setPage={changePage} />
+      <div className={`fade-content${fade ? ` fade-out slide-${slideDir}` : ""}`}>
+        {page === "home" && <Home setPage={changePage} />}
+        {page === "about" && <About />}
+        {page === "experience" && <Experience />}
+        {page === "projects" && <Projects />}
+        {page === "contact" && <Contact />}
+      </div>
       {page !== "contact" && (
         <button
           className="arrow-btn arrow-right"

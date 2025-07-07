@@ -108,3 +108,21 @@ form button {
   stroke-linecap: round;
   fill: none;
 }
+
+.fade-content {
+  transition: opacity 0.35s, transform 0.35s;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-content.fade-out.slide-left {
+  opacity: 0;
+  transform: translateX(-32px); /* ขยับซ้ายเบาลง */
+  pointer-events: none;
+}
+
+.fade-content.fade-out.slide-right {
+  opacity: 0;
+  transform: translateX(32px);  /* ขยับขวาเบาลง */
+  pointer-events: none;
+}
