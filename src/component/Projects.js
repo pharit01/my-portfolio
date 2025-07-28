@@ -22,7 +22,7 @@ export const Projects = () => {
           <div className="project-name">Test Api Pokemons</div>
           <div className="project-btn-group">
             <a href="https://github.com/pharit01/my-portfolio/tree/main/src/component/Poke/" className="project-btn" target="_blank" rel="noopener noreferrer">Github</a>
-            <a href="https://pharit01.github.io/Pokemons/" className="project-btn">Live Demo</a>
+            <a href="https://pharit01.github.io/my-portfolio/#/Pokemons" className="project-btn">Live Demo</a>
           </div>
         </div>
         {/* <div className="project-card">

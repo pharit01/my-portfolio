@@ -2,22 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 
-import App from './App'; // แสดง Portfolio
-import PokeViwe from './component/Poke/PokeViwe'; // แสดง Battle Pokémon
+import App from './App';
+import PokeViwe from './component/Poke/PokeViwe';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
-        <Route path="/my-portfolio" element={<App />} />
+        <Route path="/" element={<App />} />
         <Route path="/Pokemons" element={<PokeViwe />} />
-        <Route path="*" element={<App />} /> {/* fallback ไปหน้า Portfolio */}
+        <Route path="*" element={<App />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 );
 
