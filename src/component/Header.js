@@ -21,11 +21,11 @@ export const Header = ({ page, setPage }) => {
           className={`nav-link${page === "experience" ? " active" : ""}`}
           onClick={() => setPage("experience")}
         >Experience</a>
-        {/* <a
+        <a
           href="#projects"
           className={`nav-link${page === "projects" ? " active" : ""}`}
           onClick={() => setPage("projects")}
-        >Projects</a> */}
+        >Projects</a>
         <a
           href="#contact"
           className={`nav-link${page === "contact" ? " active" : ""}`}

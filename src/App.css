@@ -35,11 +35,11 @@
   flex-direction: column;
   gap: 20px;
 }
-form input, form textarea {
+/* form input, form textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
-}
+} */
 form button {
   padding: 10px 20px;
   cursor: pointer;

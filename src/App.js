@@ -8,12 +8,12 @@ import { Contact } from "./component/Contact";
 import { Header } from "./component/Header";
 import { Footer } from "./component/Footer";
 
-const pages = ["home", "about", "experience", /*"projects",*/ "contact"];
+const pages = ["home", "about", "experience", "projects", "contact"];
 
 function App() {
   const [page, setPage] = useState("home");
   const [fade, setFade] = useState(false);
-  const [slideDir, setSlideDir] = useState(""); // "left" หรือ "right"
+  const [slideDir, setSlideDir] = useState(""); 
   const currentIndex = pages.indexOf(page);
 
   const changePage = (newPage) => {
