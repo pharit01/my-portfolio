@@ -1,21 +1,23 @@
 {
   "files": {
-    "main.css": "/my-portfolio/static/css/main.3624139b.css",
-    "main.js": "/my-portfolio/static/js/main.a33e55f1.js",
+    "main.css": "/my-portfolio/static/css/main.0cab0db3.css",
+    "main.js": "/my-portfolio/static/js/main.8486a31f.js",
     "static/js/453.1407b060.chunk.js": "/my-portfolio/static/js/453.1407b060.chunk.js",
     "static/media/Resume.pdf": "/my-portfolio/static/media/Resume.fc6a8cfee0ea9842ca01.pdf",
     "static/media/profile.jpg": "/my-portfolio/static/media/profile.9cec3e7b1295702dbd13.jpg",
-    "static/media/user-graduate-solid.svg": "/my-portfolio/static/media/user-graduate-solid.6cbae5f6c379568a1f090b2e006dc6a6.svg",
+    "static/media/portfolio.png": "/my-portfolio/static/media/portfolio.288dfa3de3286f073b5d.png",
+    "static/media/Pokemons.png": "/my-portfolio/static/media/Pokemons.917c1bd9cca1d9abbef4.png",
     "index.html": "/my-portfolio/index.html",
+    "static/media/user-graduate-solid.svg": "/my-portfolio/static/media/user-graduate-solid.6cbae5f6c379568a1f090b2e006dc6a6.svg",
     "static/media/briefcase-solid.svg": "/my-portfolio/static/media/briefcase-solid.439a00ac4f6f74f130b19a49e0815f28.svg",
     "static/media/envelope-solid.svg": "/my-portfolio/static/media/envelope-solid.47e816984a875ad6d4891ec36210d3a0.svg",
     "static/media/circle-check-solid.svg": "/my-portfolio/static/media/circle-check-solid.b32793d9f8b11f152da84f3a0f3d07e8.svg",
-    "main.3624139b.css.map": "/my-portfolio/static/css/main.3624139b.css.map",
-    "main.a33e55f1.js.map": "/my-portfolio/static/js/main.a33e55f1.js.map",
+    "main.0cab0db3.css.map": "/my-portfolio/static/css/main.0cab0db3.css.map",
+    "main.8486a31f.js.map": "/my-portfolio/static/js/main.8486a31f.js.map",
     "453.1407b060.chunk.js.map": "/my-portfolio/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3624139b.css",
-    "static/js/main.a33e55f1.js"
+    "static/css/main.0cab0db3.css",
+    "static/js/main.8486a31f.js"
   ]
 }
