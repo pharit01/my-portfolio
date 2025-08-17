@@ -35,22 +35,16 @@
   flex-direction: column;
   gap: 20px;
 }
-/* form input, form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-} */
 form button {
   padding: 10px 20px;
   cursor: pointer;
 }
 
 .app-wak {
-  flex-grow: 1; /* This will allow the footer to stay at the bottom */
+  flex-grow: 1; 
   background: #f6f8fb;
 }
 
-/* เพิ่มใน App.css */
 .arrow-btn {
   position: fixed;
   top: 50%;
@@ -125,4 +119,10 @@ form button {
   opacity: 0;
   transform: translateX(32px);  /* ขยับขวาเบาลง */
   pointer-events: none;
+}
+
+@media (max-width: 500px) {
+  .arrow-btn {
+    display: none;
+  }
 }

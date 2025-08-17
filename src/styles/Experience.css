@@ -120,19 +120,3 @@
     margin-right: 8px;
   }
 }
-
-@media (max-width: 900px) {
-  .exp-content {
-    flex-direction: column;
-    gap: 30px;
-  }
-  .exp-card {
-    width: 100%;
-    min-width: unset;
-    padding: 24px 20px;
-  }
-  .exp-list li {
-    width: 100%;
-    margin-bottom: 12px;
-  }
-}
