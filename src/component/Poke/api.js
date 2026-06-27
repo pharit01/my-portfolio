@@ -3,11 +3,15 @@ const BASE_URL = 'https://pokeapi.co/api/v2/';
 const cache = {};
 
 // Make a GET request to 'PokeAPI'.
+// Throws on non-2xx so error bodies (incl. plain-text 404s) never get cached
+// or treated as Pokémon data.
 const get = async ( endpoint ) => {
 	if ( ! cache[ endpoint ] ) {
-		const data = await fetch( BASE_URL + endpoint ).then( ( res ) => res.json() );
-
-		cache[ endpoint ] = data;
+		const res = await fetch( BASE_URL + endpoint );
+		if ( ! res.ok ) {
+			throw new Error( `PokeAPI ${ res.status } for ${ endpoint }` );
+		}
+		cache[ endpoint ] = await res.json();
 	}
 
 	return cache[ endpoint ];

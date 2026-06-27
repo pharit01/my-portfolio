@@ -1,4 +1,64 @@
-.pokeViwe-app-container{
-    display: flex;
-    min-height: 100vh;
+/* Pokémon page — Soft 3D theme (matches the portfolio).
+   Tokens re-declared here so the /Pokemons route is self-contained. */
+:root {
+  --accent: #2563eb;
+}
+
+.poke-page *,
+.poke-page *::before,
+.poke-page *::after { box-sizing: border-box; }
+
+.poke-page {
+  min-height: 100vh;
+  width: 100%;
+  background: #f1f1f4;
+  color: #18181b;
+  font-family: 'Sora', sans-serif;
+  overflow-x: hidden;
+}
+
+.poke-container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 22px 28px 70px;
+}
+
+/* Sticky glass nav */
+.poke-nav {
+  position: sticky;
+  top: 18px;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, .72);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, .7);
+  padding: 12px 22px;
+  border-radius: 44px;
+  box-shadow: 0 12px 34px -18px rgba(0, 0, 0, .28);
+}
+.poke-logo {
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+  color: #18181b;
+  text-decoration: none;
+}
+.poke-logo span { color: var(--accent); }
+.poke-back {
+  font-size: 14px;
+  color: #52525b;
+  text-decoration: none;
+  padding: 9px 18px;
+  border-radius: 30px;
+  transition: color .2s, background .2s;
+}
+.poke-back:hover { color: #18181b; background: #f4f4f5; }
+
+@media (max-width: 560px) {
+  .poke-container { padding: 16px 16px 56px; }
+  .poke-nav { padding: 10px 16px; }
+  .poke-back { font-size: 13px; padding: 8px 12px; }
 }

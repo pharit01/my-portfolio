@@ -1,12 +1,17 @@
-import './RangeView.css';
+import "./RangeView.css";
 
-function RangeView( { value = 50, max = 100 } ) {
-	const percent = parseInt( value ) / parseInt( max ) * 100;
-	const colorClass = percent >= 50 ? 'range-view-positive' : 'range-view-negative';
+function RangeView({ value = 0, max = 255, variant = "default" }) {
+  const pct = Math.max(
+    0,
+    Math.min(100, (parseInt(value, 10) / parseInt(max, 10)) * 100)
+  );
 
-	return (
-		<div className={ `range-view ${ colorClass }` } style={ { '--percent': `${ percent }%` } } />
-	);
+  return (
+    <div
+      className={`range-view range-view-${variant}`}
+      style={{ "--percent": `${pct}%` }}
+    />
+  );
 }
 
 export default RangeView;
