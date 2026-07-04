@@ -1,8 +1,8 @@
 import React from "react";
 
 const STATS = [
-  { num: "1+", label: "Years as developer" },
-  { num: "11", label: "Core technologies" },
+  { num: "2+", label: "Years as developer" },
+  { num: "13", label: "Core technologies" },
   { num: "B.Eng", label: "Computer Engineering" },
 ];
 

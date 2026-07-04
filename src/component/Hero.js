@@ -2,6 +2,7 @@ import React from "react";
 import profile from "../assets/profile.jpg";
 import { useTilt } from "../hooks/useTilt";
 import { useTypewriter } from "../hooks/useTypewriter";
+import { scrollToSection } from "../utils/scrollToSection";
 
 export const Hero = () => {
   const { wrapRef, cardRef } = useTilt();
@@ -34,8 +35,8 @@ export const Hero = () => {
       </div>
 
       <div className="pf-cta-row">
-        <a className="pf-btn-dark" href="#work">View my work</a>
-        <a className="pf-btn-white" href="#contact">Get in touch</a>
+        <a className="pf-btn-dark" href="#work" onClick={(e) => scrollToSection(e, "work")}>View my work</a>
+        <a className="pf-btn-white" href="#contact" onClick={(e) => scrollToSection(e, "contact")}>Get in touch</a>
       </div>
     </header>
   );

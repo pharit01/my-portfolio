@@ -28,6 +28,9 @@
 
 html { scroll-behavior: smooth; }
 
+/* Offset in-page scroll targets so they clear the sticky nav pill. */
+#home, #about, #experience, #work, #contact { scroll-margin-top: 96px; }
+
 /* ---- Keyframes ---------------------------------------------------------- */
 @keyframes pfblink  { 0%, 50% { opacity: 1; } 50.01%, 100% { opacity: 0; } }
 @keyframes pffloat  { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
@@ -341,7 +344,7 @@ html { scroll-behavior: smooth; }
 }
 .pf-divider { height: 1px; background: var(--hairline); margin: 34px 0; }
 
-.pf-skills { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; }
+.pf-skills { display: grid; grid-template-columns: repeat(3, 1fr); gap: 34px; }
 .pf-skill-label {
   font-size: 12.5px;
   color: var(--muted-2);
@@ -408,6 +411,53 @@ html { scroll-behavior: smooth; }
   transition: transform .35s, color .35s;
 }
 .pf-proj:hover .pf-proj-arrow { transform: translate(4px, -4px); color: var(--accent); }
+
+/* ---- 5b. Experience ----------------------------------------------------- */
+.pf-exp { margin-top: 54px; }
+.pf-exp-list { display: flex; flex-direction: column; gap: 18px; }
+.pf-exp-item {
+  background: #fff;
+  border-radius: 26px;
+  padding: 30px 34px;
+  box-shadow: 0 20px 44px -28px rgba(0, 0, 0, .34);
+}
+.pf-exp-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.pf-exp-company { font-size: 19px; font-weight: 700; letter-spacing: -0.01em; }
+.pf-exp-role { color: var(--muted); font-size: 13.5px; margin-top: 5px; }
+.pf-exp-year {
+  flex-shrink: 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--accent);
+  background: rgba(37, 99, 235, .1);
+  padding: 6px 14px;
+  border-radius: 30px;
+}
+.pf-exp-points { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.pf-exp-points li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--text-2);
+}
+.pf-exp-points li::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 9px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
 
 /* ---- 6. Contact + footer ------------------------------------------------ */
 .pf-contact { margin-top: 54px; }
@@ -479,6 +529,7 @@ html { scroll-behavior: smooth; }
   .pf-name { font-size: 48px !important; }
   .pf-hero,
   .pf-about,
+  .pf-exp,
   .pf-work,
   .pf-contact { padding-left: 22px !important; padding-right: 22px !important; }
 }
@@ -500,6 +551,7 @@ html { scroll-behavior: smooth; }
   .pf-footer { flex-direction: column !important; gap: 10px !important; }
   .pf-sphere { display: none !important; }
   .pf-proj-img { height: 180px !important; }
+  .pf-exp-item { padding: 24px 22px !important; }
 }
 
 /* ≤380px — small phone: stacked full-width CTAs */
