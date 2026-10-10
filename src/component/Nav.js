@@ -7,36 +7,38 @@ export const Nav = () => {
   const close = () => setMenuOpen(false);
 
   return (
-    <nav className="pf-nav">
-      <a href="#home" className="pf-logo" onClick={(e) => scrollToSection(e, "home")}>
-        Pharit<span>.</span>
-      </a>
-
-      <div className="pf-nav-links">
-        <a className="pf-nav-pill" href="#home" onClick={(e) => scrollToSection(e, "home")}>Home</a>
-        <a className="pf-nav-pill" href="#about" onClick={(e) => scrollToSection(e, "about")}>About</a>
-        <a className="pf-nav-pill" href="#experience" onClick={(e) => scrollToSection(e, "experience")}>Experience</a>
-        <a className="pf-nav-pill" href="#work" onClick={(e) => scrollToSection(e, "work")}>Work</a>
-        <a className="pf-nav-pill" href="#contact" onClick={(e) => scrollToSection(e, "contact")}>Contact</a>
-      </div>
-
-      <div className="pf-nav-right">
-        <a className="pf-btn-dark pf-cta-desktop" href={resume} download>
-          Download CV
+    <>
+      {/* Overlay lives outside <nav>: the nav's backdrop-filter would otherwise
+          make it the containing block for position: fixed. */}
+      {menuOpen && <div className="pf-mm-overlay" onClick={close} />}
+      <nav className="pf-nav">
+        <a href="#home" className="pf-logo" onClick={(e) => scrollToSection(e, "home")}>
+          Pharit<span>.</span>
         </a>
-        <button
-          className="pf-burger"
-          onClick={() => setMenuOpen((o) => !o)}
-          aria-label="Open menu"
-          aria-expanded={menuOpen}
-        >
-          <span />
-        </button>
-      </div>
 
-      {menuOpen && (
-        <>
-          <div className="pf-mm-overlay" onClick={close} />
+        <div className="pf-nav-links">
+          <a className="pf-nav-pill" href="#home" onClick={(e) => scrollToSection(e, "home")}>Home</a>
+          <a className="pf-nav-pill" href="#about" onClick={(e) => scrollToSection(e, "about")}>About</a>
+          <a className="pf-nav-pill" href="#experience" onClick={(e) => scrollToSection(e, "experience")}>Experience</a>
+          <a className="pf-nav-pill" href="#work" onClick={(e) => scrollToSection(e, "work")}>Work</a>
+          <a className="pf-nav-pill" href="#contact" onClick={(e) => scrollToSection(e, "contact")}>Contact</a>
+        </div>
+
+        <div className="pf-nav-right">
+          <a className="pf-btn-dark pf-cta-desktop" href={resume} download>
+            Download CV
+          </a>
+          <button
+            className={`pf-burger${menuOpen ? " is-open" : ""}`}
+            onClick={() => setMenuOpen((o) => !o)}
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
+          >
+            <span />
+          </button>
+        </div>
+
+        {menuOpen && (
           <div className="pf-mobile-menu">
             <a className="pf-mm-link" href="#home" onClick={(e) => { scrollToSection(e, "home"); close(); }}>Home</a>
             <a className="pf-mm-link" href="#about" onClick={(e) => { scrollToSection(e, "about"); close(); }}>About</a>
@@ -47,8 +49,8 @@ export const Nav = () => {
               Download CV
             </a>
           </div>
-        </>
-      )}
-    </nav>
+        )}
+      </nav>
+    </>
   );
 };
