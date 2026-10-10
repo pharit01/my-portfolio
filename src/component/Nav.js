@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import resume from "../assets/Resume.pdf";
 import { scrollToSection } from "../utils/scrollToSection";
 
+const RESUME_FILENAME = "Resume - Pharit Sariwong.pdf";
+
 export const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const close = () => setMenuOpen(false);
@@ -25,7 +27,7 @@ export const Nav = () => {
         </div>
 
         <div className="pf-nav-right">
-          <a className="pf-btn-dark pf-cta-desktop" href={resume} download>
+          <a className="pf-btn-dark pf-cta-desktop" href={resume} download={RESUME_FILENAME}>
             Download CV
           </a>
           <button
@@ -45,7 +47,7 @@ export const Nav = () => {
             <a className="pf-mm-link" href="#experience" onClick={(e) => { scrollToSection(e, "experience"); close(); }}>Experience</a>
             <a className="pf-mm-link" href="#work" onClick={(e) => { scrollToSection(e, "work"); close(); }}>Work</a>
             <a className="pf-mm-link" href="#contact" onClick={(e) => { scrollToSection(e, "contact"); close(); }}>Contact</a>
-            <a className="pf-mm-cv" onClick={close} href={resume} download>
+            <a className="pf-mm-cv" onClick={close} href={resume} download={RESUME_FILENAME}>
               Download CV
             </a>
           </div>
