@@ -10,8 +10,8 @@ export const Contact = () => (
         <div className="pf-contact-sub">
           Open to new opportunities and collaborations.
         </div>
-        <a className="pf-email" href="mailto:Pharitsariwong@gmail.com">
-          Pharitsariwong@gmail.com
+        <a className="pf-email" href="mailto:pharitsariwong@gmail.com">
+          pharitsariwong@gmail.com
         </a>
         <div className="pf-footer">
           <a href="https://github.com/pharit01" target="_blank" rel="noopener noreferrer">
