@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const ROLES = ["Fullstack Developer", "Frontend Developer"];
+const ROLES = ["Full Stack Developer", "AI / LLM Integration"];
 
 /**
  * Typewriter for the hero role line. Cycles through ROLES, typing ~85ms/char,
