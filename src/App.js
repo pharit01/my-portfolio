@@ -13,12 +13,14 @@ function App() {
     <div className="pf-page">
       <div className="pf-container">
         <Nav />
-        <Hero />
-        <Stats />
-        <About />
-        <Experience />
-        <Work />
-        <Contact />
+        <main>
+          <Hero />
+          <Stats />
+          <About />
+          <Experience />
+          <Work />
+          <Contact />
+        </main>
       </div>
     </div>
   );

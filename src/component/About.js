@@ -32,9 +32,9 @@ export const About = () => (
         <span className="pf-eyebrow-dot" />
         ABOUT
       </div>
-      <div className="pf-about-head">
+      <h2 className="pf-about-head">
         I turn problems into clean, working products.
-      </div>
+      </h2>
       <div className="pf-about-body">
         Full Stack developer with 2+ years building and maintaining web
         applications with JavaScript, React, Java, PHP, Node.js, and Python. I

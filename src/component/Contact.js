@@ -6,7 +6,7 @@ export const Contact = () => (
       <div className="pf-contact-blob" />
       <div className="pf-contact-inner">
         <div className="pf-contact-eyebrow">{"// LET'S CONNECT"}</div>
-        <div className="pf-contact-head">Let's build something</div>
+        <h2 className="pf-contact-head">Let's build something</h2>
         <div className="pf-contact-sub">
           Open to new opportunities and collaborations.
         </div>

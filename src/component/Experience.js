@@ -42,7 +42,7 @@ const EXPERIENCE = [
 export const Experience = () => (
   <section id="experience" className="pf-exp">
     <div className="pf-work-head">
-      <div className="pf-work-title">Experience</div>
+      <h2 className="pf-work-title">Experience</h2>
       <div className="pf-work-meta">{String(EXPERIENCE.length).padStart(2, "0")} roles</div>
     </div>
     <div className="pf-exp-list">

@@ -18,7 +18,7 @@
   --text-2: #3f3f46;
   --text-3: #52525b;
   --muted: #71717a;
-  --muted-2: #9b9ba3;
+  --muted-2: #66666e; /* ≥4.5:1 on --bg and the page gradient */
   --muted-3: #8b8b92;
   --muted-4: #a1a1aa;
   --hairline: #eee;
@@ -56,6 +56,9 @@ html { scroll-behavior: smooth; }
 /* :where() keeps this reset at single-class specificity so component color
    rules below (.pf-btn-dark, .pf-nav-pill, …) win without !important. */
 .pf-page :where(a) { text-decoration: none; color: inherit; }
+/* Section titles are real <h2>s for structure; strip UA heading styles so
+   the existing class rules alone control their look. */
+.pf-page :where(h2) { margin: 0; font-size: inherit; font-weight: inherit; }
 
 .pf-container {
   max-width: 1120px;
@@ -667,7 +670,7 @@ html { scroll-behavior: smooth; }
   margin-top: 32px;
   font-family: 'JetBrains Mono', monospace;
   font-size: 12.5px;
-  color: var(--muted);
+  color: var(--muted-3); /* --muted is only 3.7:1 on the dark card */
   letter-spacing: .04em;
 }
 .pf-footer a { color: var(--muted-4); }

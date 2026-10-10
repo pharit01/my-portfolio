@@ -20,8 +20,8 @@ const PROJECTS = [
 export const Work = () => (
   <section id="work" className="pf-work">
     <div className="pf-work-head">
-      <div className="pf-work-title">Selected work</div>
-      <div className="pf-work-meta">02 projects</div>
+      <h2 className="pf-work-title">Selected work</h2>
+      <div className="pf-work-meta">{String(PROJECTS.length).padStart(2, "0")} projects</div>
     </div>
     <div className="pf-projects">
       {PROJECTS.map((p) => (
