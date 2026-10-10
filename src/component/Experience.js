@@ -2,7 +2,20 @@ import React from "react";
 
 const EXPERIENCE = [
   {
-    year: "2024",
+    year: "Aug 2026 – Present",
+    company: "Thalent AI",
+    role: "Full Stack Developer",
+    points: [
+      "Maintain and improve the company website",
+      "Built a web application that pulls Facebook ad campaign data for tracking and reporting",
+      "Develop and maintain the company's job board website",
+      "Redesign and improve client websites for better usability and visual design",
+      "Develop an inventory and stock management system",
+      "Tech: React, Node.js, PHP, Python, LLM APIs",
+    ],
+  },
+  {
+    year: "2024 – Jul 2026",
     company: "Avalant Co., Ltd.",
     role: "Software Developer",
     points: [
@@ -17,7 +30,7 @@ const EXPERIENCE = [
   {
     year: "2022",
     company: "SUPALAI Public Company Limited",
-    role: "Internship · Developer Department",
+    role: "Developer Intern",
     points: [
       "Develop and enhance frontends with HTML, CSS, and Bootstrap for better usability",
       "Build and maintain backend systems using C# and .NET Framework / .NET Core",
@@ -30,7 +43,7 @@ export const Experience = () => (
   <section id="experience" className="pf-exp">
     <div className="pf-work-head">
       <div className="pf-work-title">Experience</div>
-      <div className="pf-work-meta">02 roles</div>
+      <div className="pf-work-meta">{String(EXPERIENCE.length).padStart(2, "0")} roles</div>
     </div>
     <div className="pf-exp-list">
       {EXPERIENCE.map((e) => (

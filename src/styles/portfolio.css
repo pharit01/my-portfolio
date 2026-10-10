@@ -576,6 +576,8 @@ html { scroll-behavior: smooth; }
   .pf-sphere { display: none !important; }
   .pf-proj-img { height: 180px !important; }
   .pf-exp-item { padding: 24px 22px !important; }
+  /* Date ranges are long — put the badge above the company name */
+  .pf-exp-head { flex-direction: column-reverse !important; gap: 10px !important; }
 }
 
 /* ≤380px — small phone: stacked full-width CTAs */

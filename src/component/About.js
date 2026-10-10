@@ -1,8 +1,18 @@
 import React from "react";
 
-const FRONTEND = ["HTML", "CSS", "JavaScript", "React", "REST API"];
-const BACKEND = ["Java", "C# / .NET Core", "Git", "PostgreSQL", "Oracle SQL"];
-const AI = ["AI-assisted development", "LLM API integration", "AI Agents & Automation"];
+const FRONTEND = ["HTML", "CSS", "JavaScript", "React"];
+const BACKEND = [
+  "Node.js",
+  "Java",
+  "PHP",
+  "Python",
+  "C# / .NET Core",
+  "RESTful APIs",
+  "PostgreSQL",
+  "Oracle SQL",
+  "Git",
+];
+const AI = ["LLM API integration", "AI-assisted development", "Claude", "ChatGPT"];
 
 const ChipGroup = ({ label, items }) => (
   <div>
@@ -27,10 +37,11 @@ export const About = () => (
       </div>
       <div className="pf-about-body">
         Full Stack developer with 2+ years building and maintaining web
-        applications with Java, JavaScript, and HTML. I build RESTful APIs, work
-        across PostgreSQL and Oracle SQL, and enjoy the system-analysis and
+        applications with JavaScript, React, Java, PHP, Node.js, and Python. I
+        build RESTful APIs, work across PostgreSQL and Oracle SQL, and now
+        integrate LLMs into real products. I enjoy the system-analysis and
         troubleshooting side of shipping — collaborating closely with
-        cross-functional teams to get reliable software out the door.
+        cross-functional teams to get reliable, clean software out the door.
       </div>
       <div className="pf-divider" />
       <div className="pf-skills">

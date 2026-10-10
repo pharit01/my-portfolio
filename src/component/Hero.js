@@ -24,7 +24,7 @@ export const Hero = () => {
 
       <div className="pf-badge">
         <span className="pf-badge-dot" />
-        Available for work · 2026
+        Currently at Thalent AI
       </div>
 
       <h1 className="pf-name">Pharit Sariwong</h1>
