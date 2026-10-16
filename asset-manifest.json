@@ -1,19 +1,22 @@
 {
   "files": {
-    "main.css": "/my-portfolio/static/css/main.1e670b82.css",
-    "main.js": "/my-portfolio/static/js/main.2d9b55b7.js",
+    "main.css": "/my-portfolio/static/css/main.1f439343.css",
+    "main.js": "/my-portfolio/static/js/main.0e412668.js",
     "static/js/453.1407b060.chunk.js": "/my-portfolio/static/js/453.1407b060.chunk.js",
     "static/media/portfolio.png": "/my-portfolio/static/media/portfolio.5e89c75788b56eba027c.png",
+    "static/media/ai-video-editor.png": "/my-portfolio/static/media/ai-video-editor.138afd33f54894ddc203.png",
+    "static/media/stock-system.png": "/my-portfolio/static/media/stock-system.90a4fa1ddb002e296802.png",
     "static/media/Resume.pdf": "/my-portfolio/static/media/Resume.d5d251e6554674518ef5.pdf",
+    "static/media/ads-dashboard.png": "/my-portfolio/static/media/ads-dashboard.7480d66c27328429fbea.png",
     "static/media/profile.jpg": "/my-portfolio/static/media/profile.443329349b7e168a99b6.jpg",
     "static/media/Pokemons.png": "/my-portfolio/static/media/Pokemons.917c1bd9cca1d9abbef4.png",
     "index.html": "/my-portfolio/index.html",
-    "main.1e670b82.css.map": "/my-portfolio/static/css/main.1e670b82.css.map",
-    "main.2d9b55b7.js.map": "/my-portfolio/static/js/main.2d9b55b7.js.map",
+    "main.1f439343.css.map": "/my-portfolio/static/css/main.1f439343.css.map",
+    "main.0e412668.js.map": "/my-portfolio/static/js/main.0e412668.js.map",
     "453.1407b060.chunk.js.map": "/my-portfolio/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1e670b82.css",
-    "static/js/main.2d9b55b7.js"
+    "static/css/main.1f439343.css",
+    "static/js/main.0e412668.js"
   ]
 }
